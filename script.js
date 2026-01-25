@@ -121,9 +121,21 @@ window.addEventListener('scroll', () => {
 // Add loading effect for images
 const images = document.querySelectorAll('img');
 images.forEach(img => {
-    img.addEventListener('load', () => {
-        img.style.opacity = '1';
-    });
-    img.style.opacity = '0';
     img.style.transition = 'opacity 0.5s ease-in';
+
+    // If image is already loaded (cached), show it immediately
+    if (img.complete) {
+        img.style.opacity = '1';
+    } else {
+        // Otherwise hide it and wait for load event
+        img.style.opacity = '0';
+        img.addEventListener('load', () => {
+            img.style.opacity = '1';
+        });
+
+        // Safety timeout to ensure visibility even if event is missed
+        setTimeout(() => {
+            img.style.opacity = '1';
+        }, 2000);
+    }
 });

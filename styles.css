@@ -568,6 +568,27 @@ section {
     border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
+.project-details {
+    list-style: none;
+    margin-bottom: var(--spacing-md);
+}
+
+.project-details li {
+    position: relative;
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.project-details li::before {
+    content: '▹';
+    color: var(--color-accent-primary);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;

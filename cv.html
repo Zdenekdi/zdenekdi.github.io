@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdeněk Dias - CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --cv-width: 800px;
+            --cv-bg: #ffffff;
+            --cv-text: #0a0e27;
+            --cv-accent: #1a2a6c;
+        }
+
+        body.cv-page {
+            background: #f0f2f5;
+            padding: 40px 0;
+            color: var(--cv-text);
+        }
+
+        .cv-container {
+            width: var(--cv-width);
+            margin: 0 auto;
+            background: var(--cv-bg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Tech-themed background graphics for CV */
+        .cv-bg-graphics {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            opacity: 0.05;
+            pointer-events: none;
+            background-image: url('file:///Users/zdenekdias/.gemini/antigravity/brain/59d995e7-9fd9-494e-a524-c32603d20ff6/zd_logo_v2_green_proposal_1777195608101.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+            transform: translate(100px, -50px) rotate(15deg);
+        }
+
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--cv-accent);
+            padding-bottom: 30px;
+        }
+
+        .cv-title-section h1 {
+            font-size: 36px;
+            margin: 0;
+            color: var(--cv-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cv-subtitle {
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin-top: 5px;
+        }
+
+        .cv-logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .cv-section {
+            margin-bottom: 30px;
+        }
+
+        .cv-section h2 {
+            font-size: 20px;
+            color: var(--cv-accent);
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .experience-header h3 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .experience-date {
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+
+        .experience-company {
+            font-style: italic;
+            color: var(--color-accent-primary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .cv-list {
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .cv-sidebar-item {
+            margin-bottom: 25px;
+        }
+
+        .cv-sidebar-item h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: var(--color-text-muted);
+        }
+
+        .cv-contact-link {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: var(--cv-text);
+            text-decoration: none;
+        }
+
+        .cv-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        @media print {
+            body.cv-page {
+                background: none;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                width: 100%;
+                margin: 0;
+                padding: 40px;
+            }
+            .cv-controls {
+                display: none;
+            }
+        }
+
+        .tag-small {
+            display: inline-block;
+            background: #f0f2f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body class="cv-page">
+    <div class="cv-controls">
+        <button class="btn btn-primary" onclick="window.print()" data-i18n="cv_download">Stáhnout PDF</button>
+        <a href="index.html" class="btn btn-secondary" data-i18n="cv_back">Zpět na portfolio</a>
+        <div class="lang-switcher" style="background: white; padding: 10px; border-radius: 8px; box-shadow: var(--shadow-sm);">
+            <button class="lang-btn active" data-lang="cs">CZ</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+
+    <div class="cv-container">
+        <div class="cv-bg-graphics"></div>
+        
+        <header class="cv-header">
+            <div class="cv-title-section">
+                <h1 data-i18n="hero_title_1">Zdeněk Dias</h1>
+                <div class="cv-subtitle" data-i18n="cv_subtitle">QA Automation Architect</div>
+            </div>
+            <img src="file:///Users/zdenekdias/.gemini/antigravity/brain/59d995e7-9fd9-494e-a524-c32603d20ff6/zd_logo_v2_green_proposal_1777195608101.png" alt="Logo ZD" class="cv-logo">
+        </header>
+
+        <div class="cv-grid">
+            <main>
+                <section class="cv-section">
+                    <h2 data-i18n="cv_experience">Pracovní zkušenosti</h2>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>QA Analytik / Automation Specialist</h3>
+                            <span class="experience-date">2021 – Současnost</span>
+                        </div>
+                        <span class="experience-company">CENDIS, s.p.</span>
+                        <ul class="cv-list">
+                            <li data-i18n="about_text_1">QA analytik pro klíčové státní projekty (Portál dopravy, IS dálničních známek).</li>
+                            <li>Návrh a implementace automatizovaných testů (Playwright, Robot Framework).</li>
+                            <li>Management testovacích prostředí a CI/CD pipeline.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Software Test Engineer</h3>
+                            <span class="experience-date">2018 – 2021</span>
+                        </div>
+                        <span class="experience-company">KBC Group (ČSOB)</span>
+                        <ul class="cv-list">
+                            <li>Skriptování testů pro mobilní a core bankovní systémy.</li>
+                            <li>Využití Java a Kotlin pro rozšíření interních testovacích frameworků.</li>
+                            <li>Práce s Jenkins a Docker pro izolované testy.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <h3>Full Stack Developer (Contractor)</h3>
+                            <span class="experience-date">2016 – Současnost</span>
+                        </div>
+                        <span class="experience-company">Vlastní projekty (QA Lens PRO, Nexus Hub, atd.)</span>
+                        <ul class="cv-list">
+                            <li data-i18n="project_qa_desc">Vývoj QA Lens PRO – nástroje pro vizuální regresi.</li>
+                            <li data-i18n="project_boostup_desc">Vývoj e-commerce řešení na míru v React/SvelteKit.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h2 data-i18n="projects_title">Projekty</h2>
+                    <div class="experience-item">
+                        <h3>QA Lens PRO (Open Source)</h3>
+                        <p style="font-size: 14px; margin: 5px 0;" data-i18n="project_qa_desc">Chrome extension pro automatizovaný audit UI.</p>
+                        <div>
+                            <span class="tag-small">TypeScript</span>
+                            <span class="tag-small">Figma API</span>
+                            <span class="tag-small">Chrome Extension</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <aside>
+                <section class="cv-section">
+                    <h2 data-i18n="cv_contact_info">Kontakt</h2>
+                    <div class="cv-sidebar-item">
+                        <a href="tel:+420739777718" class="cv-contact-link">+420 739 777 718</a>
+                        <a href="mailto:dias.zd@gmail.com" class="cv-contact-link">dias.zd@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/zdeněk-dias-a880995b" class="cv-contact-link">LinkedIn Profile</a>
+                        <span class="cv-contact-link">Brno, Česká republika</span>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h2 data-i18n="nav_skills">Dovednosti</h2>
+                    <div class="cv-sidebar-item">
+                        <h3 data-i18n="skill_qa_title">Testing</h3>
+                        <div>
+                            <span class="tag-small">Playwright</span>
+                            <span class="tag-small">Selenium</span>
+                            <span class="tag-small">Robot Framework</span>
+                            <span class="tag-small">Visual Regression</span>
+                        </div>
+                    </div>
+                    <div class="cv-sidebar-item">
+                        <h3 data-i18n="skill_prog_title">Dev</h3>
+                        <div>
+                            <span class="tag-small">TypeScript</span>
+                            <span class="tag-small">React</span>
+                            <span class="tag-small">SvelteKit</span>
+                            <span class="tag-small">Node.js</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h2 data-i18n="cv_languages">Jazyky</h2>
+                    <div class="cv-sidebar-item">
+                        <p style="font-size: 14px;"><strong>Čeština:</strong> Rodilý mluvčí</p>
+                        <p style="font-size: 14px;"><strong>Angličtina:</strong> Profesionální (B2/C1)</p>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+
+    <script type="module">
+        import translations from './translations.js';
+        
+        let currentLang = localStorage.getItem('preferredLang') || 'cs';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLang', lang);
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+            
+            document.documentElement.lang = lang;
+            document.title = `Zdeněk Dias - CV (${lang.toUpperCase()})`;
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                setLanguage(btn.getAttribute('data-lang'));
+            });
+        });
+
+        setLanguage(currentLang);
+    </script>
+</body>
+</html>

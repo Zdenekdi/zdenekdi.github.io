@@ -9,9 +9,9 @@
     --color-text-secondary: #a8b2d1;
     --color-text-muted: #7885a8;
     
-    --color-accent-primary: #6366f1;
-    --color-accent-secondary: #818cf8;
-    --color-accent-gradient: linear-gradient(135deg, #6366f1 0%, #818cf8 50%, #a78bfa 100%);
+    --color-accent-primary: #10b981;
+    --color-accent-secondary: #059669;
+    --color-accent-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
     --color-glass-bg: rgba(255, 255, 255, 0.03);
     --color-glass-border: rgba(255, 255, 255, 0.08);
     --color-glass-hover: rgba(255, 255, 255, 0.06);
@@ -147,6 +147,37 @@ body {
     display: flex;
     gap: var(--spacing-xl);
     list-style: none;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-left: var(--spacing-xl);
+    padding-left: var(--spacing-xl);
+    border-left: 1px solid var(--color-glass-border);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    padding: 4px;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    color: var(--color-accent-primary);
+}
+
+.lang-divider {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    opacity: 0.5;
 }
 
 .nav-link {

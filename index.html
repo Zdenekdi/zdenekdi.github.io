@@ -18,14 +18,23 @@
     <nav class="nav" id="nav">
         <div class="container">
             <div class="nav-content">
-                <a href="#" class="logo">QA<span>Portfolio</span></a>
+                <a href="#" class="logo">
+                    <img src="file:///Users/zdenekdias/.gemini/antigravity/brain/59d995e7-9fd9-494e-a524-c32603d20ff6/zd_logo_v2_green_proposal_1777195608101.png" alt="ZD Logo" style="height: 40px; margin-right: 10px;">
+                    QA<span>Portfolio</span>
+                </a>
                 <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">Domů</a></li>
-                    <li><a href="#about" class="nav-link">O mně</a></li>
-                    <li><a href="#skills" class="nav-link">Dovednosti</a></li>
-                    <li><a href="#projects" class="nav-link">Projekty</a></li>
-                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                    <li><a href="#home" class="nav-link active" data-i18n="nav_home">Domů</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav_about">O mně</a></li>
+                    <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Dovednosti</a></li>
+                    <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projekty</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Kontakt</a></li>
+                    <li><a href="cv.html" class="nav-link" data-i18n="nav_cv">Životopis</a></li>
                 </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="cs">CZ</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
                 <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -42,13 +51,13 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        <span class="title-line">Zdeněk Dias</span>
-                        <span class="title-line gradient-text">QA Automation Architect & Full Stack Developer</span>
+                        <span class="title-line" data-i18n="hero_title_1">Zdeněk Dias</span>
+                        <span class="title-line gradient-text" data-i18n="hero_title_2">QA Automation Architect & Full Stack Developer</span>
                     </h1>
-                    <p class="hero-subtitle">Specializuji se na budování robustních QA frameworků, vizuální regresi a moderní full-stack aplikace s důrazem na výkon a škálovatelnost.</p>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">Specializuji se na budování robustních QA frameworků, vizuální regresi a moderní full-stack aplikace s důrazem na výkon a škálovatelnost.</p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">Moje projekty</a>
-                        <a href="#contact" class="btn btn-secondary">Kontaktujte mě</a>
+                        <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Moje projekty</a>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_contact">Kontaktujte mě</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -67,18 +76,18 @@
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Představení</span>
-                <h2 class="section-title">O mně</h2>
+                <span class="section-label" data-i18n="about_label">Představení</span>
+                <h2 class="section-title" data-i18n="about_title">O mně</h2>
             </div>
             <div class="about-content">
-                    <p class="lead">Jsem QA specialista a Full Stack developer s vášní pro automatizaci a preciznost, kterou přenáším do každého řádku kódu.</p>
-                    <p>V současné době působím v **CENDIS, s.p.** jako QA analytik, kde garantuji kvalitu klíčových státních systémů jako jsou Elektronické dálniční známky či Portál dopravy. Moje práce kombinuje hluboké technické znalosti s analytickým přístupem k zajištění stability systémů pro miliony uživatelů.</p>
-                    <p>Během své kariéry jsem vyvinul řadu inovativních nástrojů, jako je **QA Lens PRO** – open-source řešení pro vizuální regresi, které propojuje Figma designy s realitou v prohlížeči. Mám bohaté zkušenosti s CI/CD (GitHub Actions, Jenkins), automatizací pomocí Playwright a Robot Frameworku a vývojem v Reactu, SvelteKitu a Node.js.</p>
+                    <p class="lead" data-i18n="about_lead">Jsem QA specialista a Full Stack developer s vášní pro automatizaci a preciznost, kterou přenáším do každého řádku kódu.</p>
+                    <p data-i18n="about_text_1">V současné době působím v **CENDIS, s.p.** jako QA analytik, kde garantuji kvalitu klíčových státních systémů jako jsou Elektronické dálniční známky či Portál dopravy. Moje práce kombinuje hluboké technické znalosti s analytickým přístupem k zajištění stability systémů pro miliony uživatelů.</p>
+                    <p data-i18n="about_text_2">Během své kariéry jsem vyvinul řadu inovativních nástrojů, jako je **QA Lens PRO** – open-source řešení pro vizuální regresi, které propojuje Figma designy s realitou v prohlížeči. Mám bohaté zkušenosti s CI/CD (GitHub Actions, Jenkins), automatizací pomocí Playwright a Robot Frameworku a vývojem v Reactu, SvelteKitu a Node.js.</p>
                     <p>Mým cílem je vytvářet software, který nejen funguje bezchybně, ale také poskytuje špičkový uživatelský zážitek a splňuje nejvyšší technické standardy.</p>
                 <div class="about-stats">
                     <div class="stat-card">
                         <div class="stat-number">8+</div>
-                        <div class="stat-label">Let zkušeností</div>
+                        <div class="stat-label" data-i18n="about_stat_exp">Let zkušeností</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">CENDIS</div>
@@ -112,7 +121,7 @@
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h3>Automatizace & Testing</h3>
+                    <h3 data-i18n="skill_qa_title">Automatizace & Testing</h3>
                     <ul class="skill-list">
                         <li>Selenium WebDriver</li>
                         <li>Robot Framework</li>
@@ -135,7 +144,7 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h3>Nástroje & DevOps</h3>
+                    <h3 data-i18n="skill_tools_title">Nástroje & DevOps</h3>
                     <ul class="skill-list">
                         <li>Jenkins (CI/CD)</li>
                         <li>Jira (Test Management)</li>
@@ -236,7 +245,7 @@
                     </div>
                     <div class="project-content">
                         <h3>QA Lens PRO</h3>
-                        <p>Profesionální Chrome extension pro automatizovaný audit UI a vizuální regresi.</p>
+                        <p data-i18n="project_qa_desc">Profesionální Chrome extension pro automatizovaný audit UI a vizuální regresi.</p>
                         <ul class="project-details">
                             <li>Integrace s Figma API pro pixel-perfect porovnání designu s realitou.</li>
                             <li>Automatizovaný audit překladů skrze Weblate API.</li>
@@ -262,7 +271,7 @@
                     </div>
                     <div class="project-content">
                         <h3>BoostUp Energy Brew</h3>
-                        <p>High-end e-commerce platforma pro prémiovou značku energetických nápojů.</p>
+                        <p data-i18n="project_boostup_desc">High-end e-commerce platforma pro prémiovou značku energetických nápojů.</p>
                         <ul class="project-details">
                             <li>Extrémní optimalizace výkonu (Lighthouse score 95+).</li>
                             <li>Komplexní systém pro automatizaci newsletterů a správu šablon.</li>
@@ -288,7 +297,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Nexus Hub</h3>
-                        <p>Centralizovaný systém pro správu agentur s real-time konektivitou.</p>
+                        <p data-i18n="project_nexus_desc">Centralizovaný systém pro správu agentur s real-time konektivitou.</p>
                         <ul class="project-details">
                             <li>Moderní "Ghost UI" (Skeleton Screens) pro plynulý uživatelský zážitek.</li>
                             <li>Real-time monitoring konektivity mobilních relay zařízení.</li>
@@ -314,7 +323,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Revolut Sentinel</h3>
-                        <p>Android aplikace pro inteligentní monitoring a reporting finančních toků.</p>
+                        <p data-i18n="project_revolut_desc">Android aplikace pro inteligentní monitoring a reporting finančních toků.</p>
                         <ul class="project-details">
                             <li>Intercepce systémových notifikací v reálném čase.</li>
                             <li>Automatické generování "digitálních účtenek" do Telegramu.</li>
@@ -349,6 +358,79 @@
                             <span class="tag">Government IT</span>
                             <span class="tag">Playwright</span>
                             <span class="tag">Jira</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KBC -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/kbc_logo.png" alt="KBC Logo" id="project1-img"
+                            style="object-fit: contain; padding: 20px; background: white;">
+                        <div class="project-overlay">
+                            <span class="project-type">Banking Systems</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>KBC Banking Systems Testing</h3>
+                        <ul class="project-details">
+                            <li>Skriptování testů pro mobilní a core bankovní systémy.</li>
+                            <li>Správa TDA stanic a management testovacích prostředí.</li>
+                            <li>Využití Java, Kotlin a Python pro rozšíření frameworku.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">Kotlin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AT&T -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/att_logo.svg" alt="AT&T Logo" id="project2-img"
+                            style="object-fit: contain; padding: 20px; background: white;">
+                        <div class="project-overlay">
+                            <span class="project-type">Web Application</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AT&T Network Coverage App</h3>
+                        <ul class="project-details">
+                            <li>Full-stack vývoj a údržba webové aplikace pro vizualizaci pokrytí.</li>
+                            <li>Automatizace testů a reporting pomocí Robot Frameworku.</li>
+                            <li>Práce v agilním prostředí s důrazem na CI/CD procesy.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Full Stack</span>
+                            <span class="tag">Robot Framework</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Borgo Agnese -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/borgo_agnese_logo.png" alt="Borgo Agnese" id="project4-img"
+                            style="object-fit: contain; padding: 20px; background: white;">
+                        <div class="project-overlay">
+                            <span class="project-type">Android Application</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Borgo Agnese - Wine List</h3>
+                        <ul class="project-details">
+                            <li>Android aplikace pro prestižní restauraci s PDF processingem.</li>
+                            <li>Implementace pokročilého filtrování a vyhledávání vín.</li>
+                            <li>Podpora více jazykových mutací.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">Kotlin/Java</span>
+                            <span class="tag">PDF Processing</span>
                         </div>
                     </div>
                 </div>
@@ -482,7 +564,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

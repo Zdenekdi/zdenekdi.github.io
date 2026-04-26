@@ -1,3 +1,42 @@
+import translations from './translations.js';
+
+// Language switching
+let currentLang = localStorage.getItem('preferredLang') || 'cs';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('preferredLang', lang);
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            // Check if it's an input or textarea
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translations[lang][key];
+            } else {
+                el.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    
+    document.documentElement.lang = lang;
+}
+
+// Initialize language
+document.addEventListener('DOMContentLoaded', () => {
+    setLanguage(currentLang);
+    
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            setLanguage(btn.getAttribute('data-lang'));
+        });
+    });
+});
+
 // Navigation scroll effect
 const nav = document.getElementById('nav');
 

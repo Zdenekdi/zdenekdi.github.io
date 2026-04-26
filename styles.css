@@ -701,6 +701,16 @@ section {
     display: flex;
     gap: var(--spacing-md);
     align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.contact-method:hover {
+    background: var(--color-glass-hover);
+    transform: translateX(8px);
 }
 
 .method-icon {

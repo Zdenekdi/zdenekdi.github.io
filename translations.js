@@ -39,6 +39,10 @@ const translations = {
         contact_title: "Kontaktujte mě",
         contact_subtitle: "Pojďme spolupracovat!",
         contact_text: "Mám zájem o příležitosti v oblasti automatizace testování a full-stack vývoje.",
+        contact_phone: "Telefon",
+        contact_email: "Email",
+        contact_linkedin: "LinkedIn",
+        contact_address: "Adresa",
         
         cv_title: "Životopis",
         cv_subtitle: "QA Automation Architect",
@@ -89,6 +93,10 @@ const translations = {
         contact_title: "Contact Me",
         contact_subtitle: "Let's Collaborate!",
         contact_text: "I am interested in opportunities in test automation and full-stack development.",
+        contact_phone: "Phone",
+        contact_email: "Email",
+        contact_linkedin: "LinkedIn",
+        contact_address: "Address",
         
         cv_title: "Resume",
         cv_subtitle: "QA Automation Architect",

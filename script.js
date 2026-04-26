@@ -118,6 +118,17 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Scroll progress bar
+const progressBar = document.createElement('div');
+progressBar.className = 'scroll-progress';
+document.body.appendChild(progressBar);
+
+window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (window.scrollY / totalHeight) * 100;
+    progressBar.style.width = `${progress}%`;
+});
+
 // Add loading effect for images
 const images = document.querySelectorAll('img');
 images.forEach(img => {
